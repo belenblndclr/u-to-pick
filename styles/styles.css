@@ -81,3 +81,10 @@ video {
 			cursor: pointer;
 			color: yellow;
 		}
+		
+.contentend { position: absolute; top: 32%; left: 32%; width: 33%; height: 33%; text-align: center; color: white; font-size: 20px; padding: 20px 20px; border: 1px solid rgba(255, 255, 255, .75); } 
+a.restart { position: absolute; bottom: 10%; left: 47%; }
+
+/**** Index Choix Langue */
+
+#introUtopick { background: url(backintro.png) no-repeat contain center;}
