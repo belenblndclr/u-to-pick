@@ -81,10 +81,50 @@ video {
 			cursor: pointer;
 			color: yellow;
 		}
-		
-.contentend { position: absolute; top: 32%; left: 32%; width: 33%; height: 33%; text-align: center; color: white; font-size: 20px; padding: 20px 20px; border: 1px solid rgba(255, 255, 255, .75); } 
-a.restart { position: absolute; bottom: 10%; left: 47%; }
+
+/* Restar */ 
+.contentend { 
+	position: absolute; 
+	top: 32%; 
+	left: 32%; 
+	width: 33%; 
+	height: 33%; 
+	text-align: center; 
+	color: white; 
+	font-size: 20px; 
+	padding: 20px 20px; 
+	border: 1px solid rgba(255, 255, 255, .75); 
+} 
+a.restart {
+	position: absolute; 
+	bottom: 10%; 
+	left: 47%; 
+}
 
 /**** Index Choix Langue */
 
-#introUtopick { background: url(backintro.png) no-repeat contain center;}
+#introUtopick { 
+	background-image: url('img/backintro.png'); 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	background-position: center center;
+}
+#introUtopick .lang { 
+	position: absolute; 
+	width: 30%;
+	margin-left: 35%;
+	height: 10%;
+	top: 60%;
+	}
+	
+#introUtopick .lang a { 
+	padding: 1em 2em;
+	text-align: center;
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	float: left;
+}
+#introUtopick .lang a:nth-child(2) { 
+	float: right;
+}
