@@ -86,6 +86,7 @@ display plugin
     background: url("img/play.png") no-repeat left -169px transparent;
 }
 
+/*
 .ppbuffering {    
     position: absolute;
     left: 50%;
@@ -102,7 +103,6 @@ display plugin
     -webkit-border-radius: 15px;
     border-radius: 15px;    
 }
-
 
 /***************************************
 controlbar plugin
