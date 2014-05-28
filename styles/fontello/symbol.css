@@ -19,7 +19,7 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before, .lb-close:before {
+ [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "symbol";
   font-style: normal;
   font-weight: normal;
@@ -75,7 +75,7 @@
 .icon-opera:before { content: '\e816'; } /* '' */
 .icon-ie:before { content: '\e817'; } /* '' */
 .icon-cancel:before { content: '\e818'; } /* '' */
-.icon-cancel-circled:before, .lb-close:before { content: '\e819'; } /* '' */
+.icon-cancel-circled:before { content: '\e819'; } /* '' */
 .icon-vcard:before { content: '\e81a'; } /* '' */
 .icon-at:before { content: '\e81b'; } /* '' */
 .icon-gamepad:before { content: '\e81c'; } /* '' */

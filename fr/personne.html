@@ -48,16 +48,43 @@
 	a {color: white;}
 	section {height: 100%; position: absolute; width: 98%; padding: 1%;}
 		.entract {top: 100%;}
-		.info {background-image: url(img/back1.png); background-size: cover; background-repeat: no-repeat; }
-		.info article { margin: 1em; width: 45%; float: left; background-color: rgba(0,0,0,0.5);}
+		.info { }
+		.info article {margin: 1em; width: 45%; float: left; background-color: rgba(0,0,255,0.7); padding: 0.5em 0.8em;}
 		.info .detail {background-color: rgba(0,0,0,0.6); width: 40%; height:6em; }
-		.info .play {position: absolute; bottom: 1em; background-color: rgba(0,0,0,0.5); font-size: 2em; width: 10%; left: 45%; text-align: center;}
+		.info .play {}
 		.info .about {}
 		.info .gameplay {}
 		.mini-jeu{top: 100%; background-color: rgba(0,0,0,1); color: white;}
 		
-		h1 {font-size: 6em; padding: 0; margin: 0; text-transform: uppercase; max-width: 40%; background-color: red; text-align: right; float: left;}
+		h1 {font-size: 6em; padding: 0; margin: 0; text-transform: uppercase; max-width: 40%; float: left;} 
+		
+		.playspan {position: absolute; bottom: 7%; background-color: rgba(255,0,0,1); font-size: 2em; width: 100%; left: 0%; text-align: center; height: 2em; line-height: 1.7em;}
+		
+		.playspan a { text-decoration: none;}
+		
+		article h2 { margin: 0; padding: 0;}
+		
+		.ref {height: 60px; width: 60px; float: left; background-color: yellow; margin-right: 1em;}
+		
+		.detail img {height: 70px;float: left; margin-right: 1em;}
+		.detail a {text-decoration: none; font-size: 2em; line-height: 70px;}
+		
 	</style>
+	
+	<link rel="stylesheet" href="../styles/fontello/symbol.css">
+    <link rel="stylesheet" href="../styles/fontello/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/symbol-ie7.css"><![endif]-->
+    <script type="text/javascript">
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+        
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
 
 </head>
 
@@ -66,9 +93,13 @@
 	<section class="info">
 		<h1>Prénomnond</h1>
 		<article class="detail">
-			<span>Img avatar</span>
-			<a href="">Url Site perso</a>
-			<a href="">social links</a>
+			<img src=""/>
+			<a href="" class="flashlight"></a>
+			<a href="" class="icon-vcard"></a>
+			<a href="" class="icon-facebook"></a>
+			<a href="" class="icon-linkedin"></a>
+			<a href="" class="icon-twitter"></a>
+			<a href="" class="icon-pinterest"></a>
 		</article>
 		
 		<article class="about">
@@ -77,8 +108,7 @@
 			</p>
 			<p>Me quidem autem huius sapientissimum illius ut ais autem ais sic ais dicta Apollo ob vestrum enim sapientissimum anteponas De sapientissimum Apollo cave cave iam Catoni habetote ob illius ais De ut quem istum quem ne vestrum istum illius laudantur iam iudicavit autem sic rem facta facta huius rem illius.
 			</p>
-			<p>références
-			</p>			
+			<a href="" class="ref"></a> <a href="" class="ref"></a> <a href="" class="ref"></a> <a href="" class="ref"></a>			
 		</article>
 		
 		<article class="gameplay">
@@ -88,7 +118,9 @@
 			</p>
 		</article>
 		
-		<a href="#mini-jeu" class="play">Jouer</a>
+		<span class="playspan">
+			<a href="#mini-jeu">Jouer</a>
+		</span>
 	</section>
 	<!--<section class="entract" id="entract">entract
 	</section>-->
