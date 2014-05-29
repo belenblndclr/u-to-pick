@@ -6,16 +6,9 @@ Date : 2014
 /* HTML5 display-role reset for older browsers */
 
 @font-face {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'Inconsolata';
   font-style: normal;
-  font-weight: 300;
-  src: local('Yanone Kaffeesatz Light'), local('YanoneKaffeesatz-Light'), url(font/YanoneKaffeesatz-Light.woff) format('woff');
-}
-@font-face {
-  font-family: 'Yanone Kaffeesatz';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url(font/YanoneKaffeesatz-Light.woff) format('woff');
+  src: local('Inconsolata'), local('Inconsolata'), url('font/inconsolata.woff') format('woff');
 }
 
 article, aside, details, figcaption, figure, 
@@ -29,7 +22,9 @@ body, html {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	font-family: 'Yanone Kaffeesatz', 'sans-serif';
+	font-family: 'Inconsolata', 'sans-serif';
+	color: white;
+	background-color: black;
 }
 section {height: 100%; width: 100%; background-color: rgba(0,0,0,0); position: fixed; top: 0; left: 0;}
 
