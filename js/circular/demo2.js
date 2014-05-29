@@ -9,7 +9,7 @@
 
 	function handler(){
 	  if(!open){
-	    this.innerHTML = "utopick";
+	    this.innerHTML = "";
 	    classie.add(wrapper, 'opened-nav');
 	  }
 	  else{
