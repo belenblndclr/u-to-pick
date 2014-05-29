@@ -70,22 +70,46 @@
 
 <body style="height: 100%; padding: 0; margin: 0;">
 
-	<section id="introVideo">
+	<section id="introVideo" style="height: 100%;">
 		<a href="index.html#videoUtopick" style="top: 50%; left: 50%; background-color: red; position: absolute; z-index: 1000;">Passer l'intro</a>
-		<video id="player_b" class="projekktor" poster="intro.png" title="this is projekktor" controls>
-				<source src="http://u-to-pick.com/video/sequ1.mp4" type="video/mp4" />
+		<video id="player_b" poster="" title="Utopick party" controls></video>
 		</video>
 
+		<div id="stuffEnd"></div>
+		<div id="reprendre"></div>
 
 		<script type="text/javascript">
-		$(document).ready(function() {
-			projekktor('#player_b', {
-			volume: 0.8,
-			playerFlashMP4: 'http://www.yourdomain.com/StrobeMediaPlayback.swf',
-			playerFlashMP3: 'http://www.yourdomain.com/StrobeMediaPlayback.swf'
-			});
-		});
-		</script> 
+			jQuery(document).ready(function($) {
+				projekktor('#player_b', {
+				title: "Cuepoint",
+				debug: false,
+				poster: 'img/intro.png',
+				playerFlashMP4: 'http://www.projekktor.com/wp-content/manual/jarisplayer.swf',
+				playerFlashMP3: 'http://www.projekktor.com/wp-content/manual/jarisplayer.swf',    
+				ratio: 16/9,
+				plugin_controlbar: {
+					showCuePoints: true
+				},
+				controls: true,
+				playlist: [
+						{
+						0: {src:'http://u-to-pick.com/video/sequ1.mp4', type:'video/mp4'},
+							cuepoints: [
+								{
+								on: '02:42',
+								value: '<section><a class="restart icon-facebook" href="">Revoir la video</a><span class="contentend">Ici le titre<br /><br />ici du texte de description<br />ici l\'explication du comment pourquoi<br />et encore la du texte</span></section>',
+								callback: end
+								},				
+							]
+						}
+					]
+				});
+				function end(obj) {					
+					obj.player.setPause();
+					$('#stuffEnd').prepend( $('<span/>').html(obj.value)); //on fait apparaître dans une autre div
+				}
+			})
+		</script>
 	</section>
 	
 </body>
