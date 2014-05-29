@@ -31,5 +31,28 @@ $(document).ready(function () {
 		projekktor('#player_a').setPlay();
 		$('#reprendre').hide();
 	});
-
+	
+	//Action sur la nav a.icon-info
+	$('span a.icon-info').click(function() {
+		projekktor('#player_a').setPause();
+		$('#reprendre').show().html('<span>Reprendre</span>');
+	});
+	
+	$('#reprendre').click(function() {
+		projekktor('#player_a').setPlay();
+		$('#reprendre').hide();
+	});
+	
+	//Action sur la nav a.icon-at
+	$('span a.icon-at').click(function() {
+		projekktor('#player_a').setPause();
+		$('#reprendre').show().html('<span>Reprendre</span>');
+	});
+	
+	$('#reprendre').click(function() {
+		projekktor('#player_a').setPlay();
+		$('#reprendre').hide();
+	});
+	
+	
 }); //Fin document.ready

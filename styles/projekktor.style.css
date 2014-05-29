@@ -239,7 +239,8 @@ controlbar plugin
 }
 
 .ppfsenter,
-.ppfsexit  {    
+.ppfsexit  { 
+	display: none; // propriété rajoutée par utopick - on masque le full screen à droite de la timeline ppcontrol  
     width: 30px;
     height: 30px;
     background: url("img/maccaco.png") no-repeat right top transparent;

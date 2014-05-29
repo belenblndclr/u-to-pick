@@ -43,6 +43,65 @@
 	</script>
 <!-- fin analytics -->
 
+<!-- Appel de jQuery -->
+<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- script unity-->
+<script src="../js/UnityObject2.js" type="text/javascript"></script>
+<!-- intégration jeu unity SCRIPT -->
+<script type="text/javascript">
+		var unityObjectUrl = "../js/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 1080, 
+				height: 576,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "../games/vincent.unity3d");
+			});
+		</script>
+
 	<style type="text/css" media="screen">
 	html, body {height: 100%; margin: 0; padding: 0; color: white; overflow: hidden; font-family: 'Yanone Kaffeesatz', 'sans-serif';}
 	a {color: white;}
@@ -68,6 +127,39 @@
 		
 		.detail img {height: 70px;float: left; margin-right: 1em;}
 		.detail a {text-decoration: none; font-size: 2em; line-height: 70px;}
+		
+		
+		/*CSS Unity*/
+		div.content {
+			margin: auto;
+			width: 1080px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 576px;
+			width: 1080px;
+		}
+		
 		
 	</style>
 	
@@ -127,6 +219,16 @@
 	<section id="mini-jeu" class="mini-jeu">
 		<div> Unity</div>
 		<a href="">Close</a>
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
 	</section>
 
 	
