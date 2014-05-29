@@ -133,17 +133,20 @@
 		</span>
 		
 		<script type="text/javascript">
-					$("#k").click(function(){
-					alert('coucou');
-				var iframe = $("#mini-jeu");
-				iframe.attr("src", iframe.data("src")); 
+
+			$("#k").click(function(){
+				alert('coucou');
+				$("iframe").each(function(){
+					$(this).attr("src", $(this).data("src"));
+				});
+
 			});
 		</script>
 	</section>
 	<!--<section class="entract" id="entract">entract
 	</section>-->
-	<section id="mini-jeu" class="mini-jeu">
-		<iframe src="about:blank" data-src="jeu_personne.html">
+	<section id="mini-jeu" class="mini-jeu" >
+		<iframe src="#mini-jeu" data-src="jeu_personne.html" style="height: 100%; width: 100%;">
 		</iframe>	
 	</section>
 
