@@ -101,7 +101,7 @@
 				},*/
 				{
 				on: '01:02',
-				value: '<a class="c" href="#marine"><img src="../img/bouton.png" /> <span>Marine</span></a>',
+				value: '<a class="c" id="kiou" href="#marine"><img src="../img/bouton.png" /> <span>Marine</span></a>',
 				callback: addUselessText
 				},
 				{
@@ -204,12 +204,20 @@
 			})
 		</script>
 		
+		<!--<script type="text/javascript">
+					$("#stuff").click(function(){
+					alert('coucou');
+				var iframe = $("#coucou");
+				iframe.attr("src", iframe.data("src")); 
+			});
+		</script>
+		
 		<div class="lb-overlay" id="marine">
-			<iframe src="personne.html">
+			<iframe id="coucou" data-src="personne.html#info" src="about:blank">
 			  <p>Your browser does not support iframes.</p>
 			</iframe>
 			<a href="#videoUtopick" class="lb-close icon-cancel"></a>
-		</div>
+		</div>-->
 		
 		<div class="lb-overlay" id="geraldine">
 			<iframe src="personne.html">
@@ -217,7 +225,7 @@
 			</iframe>
 			<a href="#videoUtopick" class="lb-close icon-cancel icon-cancel"></a>
 		</div>
-		
+		<!--
 		<div class="lb-overlay" id="jennifer">
 			<iframe src="personne.html">
 			  <p>Your browser does not support iframes.</p>
@@ -306,7 +314,7 @@
 			  <p>Your browser does not support iframes.</p>
 			</iframe>
 			<a href="#videoUtopick" class="lb-close icon-cancel"></a>
-		</div>
+		</div>-->
 	
 		
 		<nav>
