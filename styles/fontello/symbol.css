@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'symbol';
-  src: url('font/symbol.eot?49769864');
-  src: url('font/symbol.eot?49769864#iefix') format('embedded-opentype'),
-       url('font/symbol.woff?49769864') format('woff'),
-       url('font/symbol.ttf?49769864') format('truetype'),
-       url('font/symbol.svg?49769864#symbol') format('svg');
+  src: url('../font/symbol.eot?4901421');
+  src: url('../font/symbol.eot?4901421#iefix') format('embedded-opentype'),
+       url('../font/symbol.woff?4901421') format('woff'),
+       url('../font/symbol.ttf?4901421') format('truetype'),
+       url('../font/symbol.svg?4901421#symbol') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'symbol';
-    src: url('font/symbol.svg?49769864#symbol') format('svg');
+    src: url('../font/symbol.svg?4901421#symbol') format('svg');
   }
 }
 */
@@ -77,7 +77,7 @@
 .icon-cancel:before { content: '\e818'; } /* '' */
 .icon-cancel-circled:before { content: '\e819'; } /* '' */
 .icon-vcard:before { content: '\e81a'; } /* '' */
-.icon-at:before { content: '\e81b'; } /* '' */
+.icon-hdd:before { content: '\e81b'; } /* '' */
 .icon-gamepad:before { content: '\e81c'; } /* '' */
 .icon-flashlight:before { content: '\e81d'; } /* '' */
 .icon-tools:before { content: '\e81e'; } /* '' */
@@ -88,3 +88,8 @@
 .icon-paper-plane:before { content: '\e823'; } /* '' */
 .icon-vimeo-circled:before { content: '\e824'; } /* '' */
 .icon-vimeo:before { content: '\e825'; } /* '' */
+.icon-glasses:before { content: '\e826'; } /* '' */
+.icon-asl:before { content: '\e827'; } /* '' */
+.icon-code-1:before { content: '\e828'; } /* '' */
+.icon-globe-inv:before { content: '\e829'; } /* '' */
+.icon-globe:before { content: '\e82a'; } /* '' */

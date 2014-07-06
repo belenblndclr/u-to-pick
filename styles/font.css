@@ -1,0 +1,19 @@
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  src: local('Inconsolata'), local('Inconsolata'), url('font/inconsolata.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'SubtleSansRegular';
+  font-style: normal;
+  src: local('SubtleSansRegular'), local('SubtleSansRegular'), url('font/SubtleSansRegular.otf');
+}
+
+
+@font-face {
+  font-family: 'SubtleSansLight';
+  font-style: normal;
+  src: local('SubtleSansLight'), local('SubtleSansLight'), url('font/SubtleSansLight.otf');
+}
